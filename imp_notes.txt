@@ -1,0 +1,200 @@
+
+different read modes in dataframes 
+
+permissive 
+fail_fast 
+drop_mal_form 
+
+
+
+Here are the main PySpark functions to drop null values 👇
+
+DataFrame.na.drop()
+
+DataFrame.dropna()
+
+Both are equivalent — example usage:
+
+df.na.drop()
+df.dropna()
+
+
+Optional parameters:
+
+how="any" → drop row if any column is null
+
+how="all" → drop row if all columns are null
+
+subset=["col1", "col2"] → consider only specific columns
+
+
+
+
+
+select e1.empno as emp_empno, e2.ename as emp_name ,e2.mgr as mgr_empno ,e2.ename as mgr_name 
+              from 
+             emp e1 
+             join emp e2 
+             on e1.empno=e2.mgr
+
+
+
+select e1.empno as emp_empno,count(e1.empno) as emp_count
+            from 
+             emp e1 
+             join emp e2 
+             on e1.empno=e2.mgr
+             group by e1.empno 
+             ;
+
+
+
+
+
+# 1. Load warranty claims data (inline)
+def load_warranty_data(spark: SparkSession) -> DataFrame:
+    
+data = [
+	("CL001", "Laptop", "2024-01-10", "2024-02-15", "Hardware Failure"),
+	("CL002", "Mobile", "2024-02-01", "2024-02-05", "Battery Issue"),
+	("CL003", "Tablet", "2024-03-05", "2024-04-10", "Screen Damage"),
+	("CL004", "Laptop", "2024-03-15", "2024-03-16", "Keyboard Issue"),
+	("CL005", "Mobile", "2024-04-01", "2024-05-20", "Software Glitch")
+]
+
+columns=[claim_id,product_type,claim_date,resolved_date,issue_type]
+"""
+    Loads inline warranty claim data into a DataFrame.
+
+    Args:
+        spark (SparkSession): The active Spark session.
+
+    Returns:
+        DataFrame: Warranty claims dataset.
+    """
+    pass
+
+
+# 2. Add resolution_days column
+def add_resolution_days(df: DataFrame) -> DataFrame:
+    """
+    Adds a column indicating number of days taken to resolve the claim.
+
+    Args:
+        df (DataFrame): Input warranty claims DataFrame.
+
+    Returns:
+        DataFrame: With an added column `resolution_days`.
+    """
+    pass
+
+
+# 3. Filter claims resolved in more than 15 days
+def filter_long_resolution(df: DataFrame) -> DataFrame:
+    """
+    Filters only those claims which took more than 15 days to resolve.
+
+    Args:
+        df (DataFrame): Input DataFrame with `resolution_days`.
+
+    Returns:
+        DataFrame: Filtered claims with delay > 15 days.
+    """
+    pass
+
+
+# 4. Product type with highest average resolution time
+def product_with_highest_avg_resolution(df: DataFrame) -> DataFrame:
+    """
+    Identifies the product type with the highest average resolution time.
+
+    Args:
+        df (DataFrame): Input DataFrame with `resolution_days`.
+
+    Returns:
+        DataFrame: Single row with product_type and avg_days.
+    """
+    pass
+
+
+# 5. Most frequent issue for delayed claims
+def top_issue_in_delays(df: DataFrame) -> DataFrame:
+    """
+    Finds the most common issue type for claims with delay > 15 days.
+
+    Args:
+        df (DataFrame): Input DataFrame with `resolution_days`.
+
+    Returns:
+        DataFrame: Issue type with highest count in delayed claims.
+    """
+    pass
+
+
+# 6. Compute delayed claim ratio
+def delayed_claim_ratio(df: DataFrame) -> float:
+    """
+    Computes ratio of delayed claims (>15 days) to total claims.
+
+    Args:
+        df (DataFrame): Input DataFrame with `resolution_days`.
+
+    Returns:
+        float: Delay ratio rounded to 2 decimal places.
+    """
+    pass
+
+
+# 7. Add claim_month column
+def add_claim_month(df: DataFrame) -> DataFrame:
+    """
+    Extracts the month from the claim_date into a new column.
+
+    Args:
+        df (DataFrame): Input DataFrame.
+
+    Returns:
+        DataFrame: With additional column `claim_month`.
+    """
+    pass
+
+
+# 8. Count of claims per product
+def count_claims_per_product(df: DataFrame) -> DataFrame:
+    """
+    Counts number of claims for each product type.
+
+    Args:
+        df (DataFrame): Input DataFrame.
+
+    Returns:
+        DataFrame: Product type with corresponding claim counts.
+    """
+    pass
+
+
+# 9. Average resolution days by issue type
+def avg_resolution_per_issue(df: DataFrame) -> DataFrame:
+    """
+    Calculates average resolution days for each issue type.
+
+    Args:
+        df (DataFrame): Input DataFrame.
+
+    Returns:
+        DataFrame: Issue type and corresponding average resolution days.
+    """
+    pass
+
+
+# 10. Flag fast resolutions (<=10 days)
+def flag_fast_resolution(df: DataFrame) -> DataFrame:
+    """
+    Adds a flag indicating whether a claim was resolved in 10 or fewer days.
+
+    Args:
+        df (DataFrame): Input DataFrame with `resolution_days_
+
+
+
+/home/user/LFS/pyspark_practice/df_prac_product.py
