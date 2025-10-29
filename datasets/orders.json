@@ -1,0 +1,73 @@
+[
+  {
+    "customer_id": 1,
+    "customer_name": "Alice",
+    "orders": [
+      {"order_id": 101, "product": "Laptop", "price": 1200, "quantity": 1},
+      {"order_id": 102, "product": "Mouse", "price": 25, "quantity": 2}
+    ]
+  },
+  {
+    "customer_id": 2,
+    "customer_name": "Bob",
+    "orders": [
+      {"order_id": 103, "product": "Monitor", "price": 300, "quantity": 1}
+    ]
+  },
+  {
+    "customer_id": 3,
+    "customer_name": "Charlie",
+    "orders": [
+      {"order_id": 104, "product": "Keyboard", "price": 75, "quantity": 1},
+      {"order_id": 105, "product": "Mouse", "price": 25, "quantity": 1}
+    ]
+  },
+  {
+    "customer_id": 4,
+    "customer_name": "Diana",
+    "orders": [
+      {"order_id": 106, "product": "Laptop", "price": 1250, "quantity": 1}
+    ]
+  },
+  {
+    "customer_id": 5,
+    "customer_name": "Ethan",
+    "orders": [
+      {"order_id": 107, "product": "Monitor", "price": 320, "quantity": 2}
+    ]
+  },
+  {
+    "customer_id": 6,
+    "customer_name": "Fay",
+    "orders": [
+      {"order_id": 108, "product": "Mouse", "price": 20, "quantity": 3}
+    ]
+  },
+  {
+    "customer_id": 7,
+    "customer_name": "George",
+    "orders": []
+  },
+  {
+    "customer_id": 8,
+    "customer_name": "Hannah",
+    "orders": [
+      {"order_id": 109, "product": "Laptop", "price": 1000, "quantity": 1}
+    ]
+  },
+  {
+    "customer_id": 9,
+    "customer_name": "Ivan",
+    "orders": [
+      {"order_id": 110, "product": "Monitor", "price": 280, "quantity": 1}
+    ]
+  },
+  {
+    "customer_id": 10,
+    "customer_name": "Jane",
+    "orders": [
+      {"order_id": 111, "product": "Mouse", "price": 22, "quantity": 2},
+      {"order_id": 112, "product": "Keyboard", "price": 65, "quantity": 1}
+    ]
+  }
+]

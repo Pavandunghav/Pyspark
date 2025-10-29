@@ -1,0 +1,10 @@
+order_id,customer_id,order_date,status,total_amount,payment_mode
+O1001,C001,1656720000,Shipped,1200.50,Credit Card
+O1002,C002,1656800000,Cancelled,,UPI
+O1003,C003,1656880000,Delivered,999.99,Net Banking
+O1004,C004,1656960000,Shipped,0.0,UPI
+O1002,C002,1656800000,Cancelled,,UPI
+O1005,C005,1657040000,Shipped,15000.00,Credit Card
+O1006,,1657120000,Delivered,600.00,UPI
+
+

@@ -1,0 +1,10 @@
+user_id	show_id	genre	watch_duration	watch_timestamp
+U1	S1	Drama	45	2024-07-01 10:15:00
+U2	S2	Comedy	80	2024-07-01 14:20:00
+U3	S3	Action	120	2024-07-02 17:30:00
+U1	S4	Comedy	90	2024-07-03 18:00:00
+U2	S5	Drama	30	2024-07-04 09:45:00
+U4	S6	Documentary	70	2024-07-05 20:10:00
+U3	S7	Drama	60	2024-07-05 21:30:00
+U5	S8	Comedy	50	2024-07-06 11:00:00
+U1	S9	Action	95	2024-07-07 13:25:00

@@ -1,0 +1,12 @@
+order_id,return_date,reason,refund_amount
+2,2024-01-25,Damaged item,450.0
+7,2024-05-10,Defective screen,1600.0
+11,2024-07-30,Wrong product,3000.0
+14,2024-09-10,Not satisfied,900.0
+19,2024-11-05,Printing issue,330.0
+22,2024-11-25,Order cancelled,1200.0
+28,2024-12-28,Missing parts,480.0
+36,2025-02-02,Poor quality,540.0
+51,2025-04-10,Invalid order,200.0
+55,2025-05-01,Customer remorse,100.0
+

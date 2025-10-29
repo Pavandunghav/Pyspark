@@ -1,0 +1,9 @@
+sale_id,brand,model,price,is_test_drive
+
+1,Toyota,Corolla,18000,false
+2,Honda,Civic,20000,false
+3,BMW,320i,0,true
+4,Ford,Focus,17000,false
+5,BMW,X3,35000,false
+6,Toyota,Camry,,false
+

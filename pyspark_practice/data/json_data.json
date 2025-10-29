@@ -1,0 +1,167 @@
+{
+    "results": [
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "miss",
+                    "first": "madison",
+                    "last": "ma"
+                },
+                "location": {
+                    "street": "7889 disputed rd",
+                    "city": "melbourne",
+                    "state": "ontario",
+                    "zip": 89110
+                },
+                "email": "madison.ma@example.com",
+                "username": "whitepeacock558",
+                "password": "1959",
+                "salt": "UxaPLR4a",
+                "md5": "169bc6b2de9fb9b2b0c768918cdc7529",
+                "sha1": "f2f79f6f1b92f883eb14e32aa1a6b6122874b742",
+                "sha256": "9cf36c30eafa2dcab1d5a382ba5b1b066a9a9346cc4223e2b3bbf6699e7bf535",
+                "registered": 1189319681,
+                "dob": 1039498129,
+                "phone": "705-715-9048",
+                "cell": "076-402-8282",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/83.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/83.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/83.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "xavier",
+                    "last": "liu"
+                },
+                "location": {
+                    "street": "3652 argyle st",
+                    "city": "trenton",
+                    "state": "new brunswick",
+                    "zip": 80427
+                },
+                "email": "xavier.liu@example.com",
+                "username": "crazybutterfly447",
+                "password": "allen",
+                "salt": "xIEnza7O",
+                "md5": "24268399ee797a107080a8fd73a7617c",
+                "sha1": "92a2e3d84147f8b0a07a6fff42fe799eb8ca9936",
+                "sha256": "de1a9bcbdff10bbc52cbc2550dad2ab661c7b8457bb36fb0f19ab0c9a53fba5b",
+                "registered": 1171599677,
+                "dob": 959536831,
+                "phone": "086-724-0514",
+                "cell": "289-095-3259",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/6.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/6.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/6.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "ms",
+                    "first": "hailey",
+                    "last": "harcourt"
+                },
+                "location": {
+                    "street": "5679 wellington st",
+                    "city": "sutton",
+                    "state": "newfoundland and labrador",
+                    "zip": 94093
+                },
+                "email": "hailey.harcourt@example.com",
+                "username": "yellowsnake122",
+                "password": "nnnnn",
+                "salt": "11YJDEo3",
+                "md5": "79fc8c24a240285df320a7f17edd7e4f",
+                "sha1": "281f35684b8f9fc1522767b152ca11b936702d17",
+                "sha256": "8627b205d6f3dc627ea0fe18427845a451c0e1338af3a36178a107312e74b3e8",
+                "registered": 1105075204,
+                "dob": 1219214190,
+                "phone": "774-861-5231",
+                "cell": "084-114-7996",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/80.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/80.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/80.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "miss",
+                    "first": "ariane",
+                    "last": "lavoie"
+                },
+                "location": {
+                    "street": "3359 simcoe st",
+                    "city": "charlottetown",
+                    "state": "new brunswick",
+                    "zip": 42066
+                },
+                "email": "ariane.lavoie@example.com",
+                "username": "blackpeacock845",
+                "password": "butts",
+                "salt": "sLqC8kMI",
+                "md5": "ac37fc5f7609fab4581cd1bb57f2cb62",
+                "sha1": "cea6787aaf5c820bc715aab701bb785d0f0c2b9f",
+                "sha256": "80980b8c18adb73960acc69067347dab2cdd5a83e58f0a1d91039a0d5f2da0ec",
+                "registered": 1164784574,
+                "dob": 926627537,
+                "phone": "154-720-8895",
+                "cell": "814-048-7752",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/14.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/14.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/14.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "lucas",
+                    "last": "clark"
+                },
+                "location": {
+                    "street": "5924 elgin st",
+                    "city": "brockton",
+                    "state": "new brunswick",
+                    "zip": 70709
+                },
+                "email": "lucas.clark@example.com",
+                "username": "brownrabbit411",
+                "password": "europa",
+                "salt": "ej2P0rjD",
+                "md5": "911818ba7ab31306d16e18594b3a174a",
+                "sha1": "6c2bcc416bacba307c5d169bd75eb0b7351c5f4f",
+                "sha256": "3442be859d93a443ca63a6d5a8c4ea2219bb8442d7f97a1e028194a5fe53544a",
+                "registered": 1038332195,
+                "dob": 1333849464,
+                "phone": "015-676-4980",
+                "cell": "415-455-0610",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/65.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/65.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/65.jpg"
+                }
+            }
+        }
+    ],
+    "nationality": "CA",
+    "seed": "182dcaa998780e4402",
+    "version": "0.8"
+}

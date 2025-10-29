@@ -1,0 +1,9 @@
+customer_id,name,email,phone,age
+C001,Alice,alice@mail.com,9876543210,28
+C002,Bob,bob@domain.com,9123456789,16
+C003,Charlie,,8912345678,34
+C004,David,david@mail.com,,45
+C002,Bob,bob@domain.com,9123456789,16
+C005,Eve,eve@domain.com,9000000000,22
+
+

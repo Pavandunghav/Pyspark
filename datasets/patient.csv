@@ -1,0 +1,7 @@
+PatientID,Name,Department,VisitDate,BillAmount,InsuranceUsed,Email
+101,Alice,Cardiology,2024-05-01,5000,true,alice@mail.com
+102,Bob,Neurology,2024-05-03,,false,bob@mail
+103,Charlie,Cardiology,2024-05-04,7000,true,charlie@mail.com
+104,David,Orthopedics,2024-05-05,3000,false,
+105,Eva,Dermatology,2024-05-06,1500,false,eva@mail.com
+106,Frank,Cardiology,2024-05-07,0,true,frank@mail.com

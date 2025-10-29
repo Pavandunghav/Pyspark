@@ -1,0 +1,30 @@
+
+EmpID|Name|Department|Email|Phone|Message
+E001|Alice|HR|alice.hr@company.com|(123)-456-7890|Please respond to this URGENT issue
+E002|Bob|Finance|bob@fin.company.com|456-789-1234|Meeting scheduled at 5pm
+E003|Charlie|IT|charlie.it@company.org|987 654 3210|URGENT: Server down
+E004|David|Sales|david.sales@company.com|741-852-9630|Quarterly target updates
+E005|Eva|HR|eva.hr@company.com|(963)-258-7410|Urgent attention required
+E006|Frank|Marketing|frank.mkt@company.io|8523697412|Campaign launch next week
+E007|Grace|IT|grace@company.org|741 963 8520|URGENT request for access
+E008|Henry|Admin|henry.admin@company.com|(654)-123-9870|Office supplies ordered
+E009|Irene|Finance|irene@fin.company.com|963-852-7415|urgent invoice approval needed
+E010|Jack|IT|jack.it@company.org|951-357-4568|Server maintenance window
+E011|Kate|Sales|kate.sales@company.com|(321)-654-9870|urgent meeting follow-up
+E012|Leo|HR|leo.hr@company.com|753-951-4562|Welcome mail sent
+E013|Maria|Marketing|maria.mkt@company.io|147 258 3690|Urgent: client feedback
+E014|Nick|IT|nick@company.org|(357)-159-7530|Check backup status
+E015|Olivia|Admin|olivia.admin@company.com|654-852-9630|Reminder sent
+E016|Paul|HR|paul.hr@company.com|789 456 1230|Urgent document submission
+E017|Quinn|Sales|quinn.sales@company.com|(963)-741-8520|Lead conversion report
+E018|Rachel|Finance|rachel@fin.company.com|852-369-7410|URGENT: budget correction
+E019|Steve|IT|steve.it@company.org|951-456-7530|Code deployment tomorrow
+E020|Tina|Marketing|tina.mkt@company.io|7539514560|Urgent client call
+E021|Uma|HR|uma.hr@company.com|(456)-123-7890|Internal training invite
+E022|Victor|Finance|victor@fin.company.com|147-963-2580|urgent payment issue
+E023|Wendy|Admin|wendy.admin@company.com|789 654 1230|Routine checkup report
+E024|Xavier|Sales|xavier.sales@company.com|456-951-7530|URGENT: client escalation
+E025|Yara|IT|yara@company.org|(852)-147-3690|urgent patch update needed
+
+
+
