@@ -1,0 +1,21 @@
+booking_id,customer_id,destination,travel_date,booking_amount,status
+B001,C001,Paris,2025-05-01,12000.50,active
+B002,C002,Dubai,2025-06-12,9500.00,completed
+B003,C003,Singapore,2025-04-20,7800.25,active
+B004,C004,Paris,2025-05-05,15000.00,cancelled
+B005,C005,London,2025-07-10,8900.00,active
+B006,C006,New York,2025-05-15,20000.75,completed
+B007,C007,Paris,2025-05-08,8000.00,completed
+B008,C008,Dubai,2025-06-20,11000.00,active
+B009,C009,Singapore,2025-05-25,9500.50,completed
+B010,C010,London,2025-06-30,7000.00,active
+B011,C011,Paris,2025-05-18,6000.00,active
+B012,C012,Dubai,2025-07-01,9000.00,completed
+B013,C013,Sydney,2025-08-05,12500.00,active
+B014,C014,Tokyo,2025-05-22,10500.00,completed
+B015,C015,New York,2025-06-01,19500.00,active
+B016,C016,Singapore,2025-07-18,8500.25,active
+B017,C017,Paris,2025-06-10,7000.00,completed
+B018,C018,London,2025-06-25,9500.00,completed
+B019,C019,Dubai,2025-05-19,10000.00,active
+B020,C020,Tokyo,2025-07-02,8800.00,active

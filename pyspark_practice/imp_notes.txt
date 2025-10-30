@@ -1,143 +1,127 @@
-# 1. Load warranty claims data (inline)
-def load_warranty_data(spark: SparkSession) -> DataFrame:
-    
-data = [
-	("CL001", "Laptop", "2024-01-10", "2024-02-15", "Hardware Failure"),
-	("CL002", "Mobile", "2024-02-01", "2024-02-05", "Battery Issue"),
-	("CL003", "Tablet", "2024-03-05", "2024-04-10", "Screen Damage"),
-	("CL004", "Laptop", "2024-03-15", "2024-03-16", "Keyboard Issue"),
-	("CL005", "Mobile", "2024-04-01", "2024-05-20", "Software Glitch")
-]
+🎯 Problem Statement — Travel Agency Bookings Analysis
+You are given a dataset containing travel booking records from a global travel agency.
+Your task is to analyze the data to gain insights into destination performance and active trips.
+You must:
+Define a schema for loading booking data.
+Load the dataset using that schema.
+Identify top-N destinations by total booking revenue.
+List all destinations with active trips.
 
-columns=[claim_id,product_type,claim_date,resolved_date,issue_type]
-"""
-    Loads inline warranty claim data into a DataFrame.
+✅ Objective: Implement 4 Pure Functions
 
-    Args:
-        spark (SparkSession): The active Spark session.
+1️⃣ Function: define_booking_schema
+Parameters: None
+Returns: StructType
+Description:
+Defines the schema for the booking records with appropriate data types.
+🔁 Function Signature:
+def define_booking_schema() -> StructType:
+📥 Expected Input:
+define_booking_schema()
+📤 Expected Output:
+StructType([
+    StructField("booking_id", StringType(), True),
+    StructField("customer_id", StringType(), True),
+    StructField("destination", StringType(), True),
+    StructField("travel_date", DateType(), True),
+    StructField("booking_amount", DoubleType(), True),
+    StructField("status", StringType(), True)
+])
+🔁 Implementation Flow:
+Use StructType and StructField from pyspark.sql.types.
+Return the schema.
 
-    Returns:
-        DataFrame: Warranty claims dataset.
-    """
-    pass
+2️⃣ Function: load_travel_bookings
+Parameters:
+spark: SparkSession
+path: str
+schema: StructType
+Returns: DataFrame
+Description:
+Loads the travel bookings dataset using the defined schema.
+🔁 Function Signature:
+def load_travel_bookings(spark: SparkSession, path: str, schema: StructType) -> DataFrame:
+📥 Expected Input:
+load_travel_bookings(spark, "data/bookings.csv", booking_schema)
+🔁 Implementation Flow:
+Use spark.read.option("header", True).schema(schema).csv(path)
+Return the DataFrame
 
+3️⃣ Function: top_n_destinations_by_revenue
+Parameters:
+df: DataFrame
+n: int
+Returns: DataFrame
+Description:
+Finds the top-N destinations by total booking revenue.
+🔁 Function Signature:
+def top_n_destinations_by_revenue(df: DataFrame, n: int) -> DataFrame:
+📥 Expected Input:
+top_n_destinations_by_revenue(df, 3)
+📤 Expected Output Example:
++-------------+--------------+
+|destination  |total_revenue |
++-------------+--------------+
+|Paris        |42000.50      |
+|Dubai        |39500.00      |
+|Singapore    |31000.75      |
++-------------+--------------+
+🔁 Implementation Flow:
+Group by destination.
+Aggregate sum(booking_amount) as total_revenue.
+Sort descending and .limit(n).
+Return result.
 
-# 2. Add resolution_days column
-def add_resolution_days(df: DataFrame) -> DataFrame:
-    """
-    Adds a column indicating number of days taken to resolve the claim.
+4️⃣ Function: list_active_destinations
+Parameters:
+df: DataFrame
+Returns: List[str]
+Description:
+Lists all destinations that have active bookings.
+🔁 Function Signature:
+def list_active_destinations(df: DataFrame) -> List[str]:
+📥 Expected Input:
+list_active_destinations(df)
+📤 Expected Output:
+["Paris", "Dubai", "Singapore"]
+🔁 Implementation Flow:
+Filter status == 'active'.
+Select destination, apply .distinct().
+Convert to list via .rdd.flatMap(lambda x: x).collect().
+Return the list.
 
-    Args:
-        df (DataFrame): Input warranty claims DataFrame.
+📊 Sample Data — bookings.csv (20 rows)
+booking_id,customer_id,destination,travel_date,booking_amount,status
+B001,C001,Paris,2025-05-01,12000.50,active
+B002,C002,Dubai,2025-06-12,9500.00,completed
+B003,C003,Singapore,2025-04-20,7800.25,active
+B004,C004,Paris,2025-05-05,15000.00,cancelled
+B005,C005,London,2025-07-10,8900.00,active
+B006,C006,New York,2025-05-15,20000.75,completed
+B007,C007,Paris,2025-05-08,8000.00,completed
+B008,C008,Dubai,2025-06-20,11000.00,active
+B009,C009,Singapore,2025-05-25,9500.50,completed
+B010,C010,London,2025-06-30,7000.00,active
+B011,C011,Paris,2025-05-18,6000.00,active
+B012,C012,Dubai,2025-07-01,9000.00,completed
+B013,C013,Sydney,2025-08-05,12500.00,active
+B014,C014,Tokyo,2025-05-22,10500.00,completed
+B015,C015,New York,2025-06-01,19500.00,active
+B016,C016,Singapore,2025-07-18,8500.25,active
+B017,C017,Paris,2025-06-10,7000.00,completed
+B018,C018,London,2025-06-25,9500.00,completed
+B019,C019,Dubai,2025-05-19,10000.00,active
+B020,C020,Tokyo,2025-07-02,8800.00,active
 
-    Returns:
-        DataFrame: With an added column `resolution_days`.
-    """
-    pass
+✅ Example Outputs
+1️⃣ Top 3 destinations by total revenue:
++-------------+--------------+
+|destination  |total_revenue |
++-------------+--------------+
+|Paris        |48000.50      |
+|Dubai        |39500.00      |
+|New York     |39500.75      |
++-------------+--------------+
+2️⃣ Active destinations:
+["Paris", "Dubai", "London", "Sydney", "New York", "Singapore", "Tokyo"]
 
-
-# 3. Filter claims resolved in more than 15 days
-def filter_long_resolution(df: DataFrame) -> DataFrame:
-    """
-    Filters only those claims which took more than 15 days to resolve.
-
-    Args:
-        df (DataFrame): Input DataFrame with `resolution_days`.
-
-    Returns:
-        DataFrame: Filtered claims with delay > 15 days.
-    """
-    pass
-
-
-# 4. Product type with highest average resolution time
-def product_with_highest_avg_resolution(df: DataFrame) -> DataFrame:
-    """
-    Identifies the product type with the highest average resolution time.
-
-    Args:
-        df (DataFrame): Input DataFrame with `resolution_days`.
-
-    Returns:
-        DataFrame: Single row with product_type and avg_days.
-    """
-    pass
-
-
-# 5. Most frequent issue for delayed claims
-def top_issue_in_delays(df: DataFrame) -> DataFrame:
-    """
-    Finds the most common issue type for claims with delay > 15 days.
-
-    Args:
-        df (DataFrame): Input DataFrame with `resolution_days`.
-
-    Returns:
-        DataFrame: Issue type with highest count in delayed claims.
-    """
-    pass
-
-
-# 6. Compute delayed claim ratio
-def delayed_claim_ratio(df: DataFrame) -> float:
-    """
-    Computes ratio of delayed claims (>15 days) to total claims.
-
-    Args:
-        df (DataFrame): Input DataFrame with `resolution_days`.
-
-    Returns:
-        float: Delay ratio rounded to 2 decimal places.
-    """
-    pass
-
-
-# 7. Add claim_month column
-def add_claim_month(df: DataFrame) -> DataFrame:
-    """
-    Extracts the month from the claim_date into a new column.
-
-    Args:
-        df (DataFrame): Input DataFrame.
-
-    Returns:
-        DataFrame: With additional column `claim_month`.
-    """
-    pass
-
-
-# 8. Count of claims per product
-def count_claims_per_product(df: DataFrame) -> DataFrame:
-    """
-    Counts number of claims for each product type.
-
-    Args:
-        df (DataFrame): Input DataFrame.
-
-    Returns:
-        DataFrame: Product type with corresponding claim counts.
-    """
-    pass
-
-
-# 9. Average resolution days by issue type
-def avg_resolution_per_issue(df: DataFrame) -> DataFrame:
-    """
-    Calculates average resolution days for each issue type.
-
-    Args:
-        df (DataFrame): Input DataFrame.
-
-    Returns:
-        DataFrame: Issue type and corresponding average resolution days.
-    """
-    pass
-
-
-# 10. Flag fast resolutions (<=10 days)
-def flag_fast_resolution(df: DataFrame) -> DataFrame:
-    """
-    Adds a flag indicating whether a claim was resolved in 10 or fewer days.
-
-    Args:
-        df (DataFrame): Input DataFrame with `resolution_days_
